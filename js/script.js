@@ -28,7 +28,7 @@ const cardLoad = async (category_id) => {
                   cardContainer.innerHTML = "";
                   categoryData.forEach((card) => {
                                     const div = document.createElement('div');
-                                    div.classList='w-60 h-auto  ml-6 p-6 front-bold'
+                                    div.classList='w-60 h-auto  ml-6 p-6 front-bold '
                                     div.innerHTML = `
                                     <div>
           <div class= >
@@ -40,7 +40,7 @@ const cardLoad = async (category_id) => {
             </figure>
             <div class="card-body">
               <h2>${card.title}</h2>
-              <p>${card?.others.views}:${card.posted_date}</p>
+              <p>${card?.others.views ? card.others.views :"N0 views" }</p>
          <div class=" flex justify-center gap-2" >       
           <img class="rounded-full w-1/4"
           src=${card?.authors[0]?.profile_picture}
